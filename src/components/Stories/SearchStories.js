@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { doFetchStories } from "../actions/story"
-import Button from './Button'
+import { doFetchStories } from "../../actions/story"
+import { SearchBar } from '../SearchBar/index'
 
 class SearchStories extends Component {
     constructor(props) {
@@ -13,16 +13,11 @@ class SearchStories extends Component {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    type='text'
-                    value={this.state.query}
-                    onChange={this.onChange}
-                />
-                <Button type='submit'>
-                    Search
-                </Button>
-            </form>
+            <SearchBar
+                onSubmit={this.onSubmit}
+                onChange={this.onChange}
+                query={this.state.query}
+            />
         )
     }
 

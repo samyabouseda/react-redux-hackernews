@@ -9,7 +9,7 @@ const ButtonInline = ({ onClick, type = 'button', children }) =>
         {children}
     </Button>
 
-const Button = ({ onClick, className, type = 'button', children }) =>
+export const Button = ({ onClick, className, type = 'button', children }) =>
     <button
         type={type}
         className={className}
@@ -17,5 +17,6 @@ const Button = ({ onClick, className, type = 'button', children }) =>
     >
         {children}
     </button>
+
 
 export default ButtonInline

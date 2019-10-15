@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import {
     getReadableStories,
     getFetchError,
-} from "../selectors/story"
+} from "../../selectors/story"
 
 import Story from './Story'
 
